@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body { 
+            font-family: Arial,sans-serif; 
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            background-image: url("https://img.freepik.com/premium-photo/celestial-sea-snake-with-shimmering-everchangi-00067-01_883586-34635.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1{
+            color: gold;
+        }
+        canvas { 
+            border: 1px solid rgb(179, 0, 250);
+            border-radius: 10px;
+            margin: 2rem;
+            background-color: rgb(68, 66, 66,0.5);
+        }
+        #leaderboard { 
+            margin-top: 20px;
+            color: white;
+            margin: 2rem;
+         }
+         table,tr,th,td{
+            border: 1px solid rgb(162, 160, 160);
+         }
+        .sec{
+            display: flex;
+        }
+        @media (max-width: 600px) {
+            .sec{
+                display: block;
+            }
+            canvas{
+                width: 100%;
+                height: 100%;
+                margin: 1rem;
+            }
+            #leaderboard{
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Snake Game 🐍</h1>
+    <div class="sec">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div  id="leaderboard">
+            <h2>Leaderboard (top 10)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody  id="leaderboard-body">
+                <!-- Leaderboard entries will go here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="snake.js"></script>
+</body>
+</html>
